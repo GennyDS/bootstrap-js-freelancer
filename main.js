@@ -1,4 +1,4 @@
-function validatesubmit()
+function validateSubmit()
 {
     let totale=0;
    let arreysconto =["YHDNU32","JANJC63","PWKCN25","SJDPO96","POCIE24"]
@@ -37,4 +37,4 @@ function validatesubmit()
 
         }
 }
-
+document.getElementById("prezzo").innerHTML = "Il prezzo è:" +totale;

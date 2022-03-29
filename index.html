@@ -28,7 +28,7 @@
 <div  class="container-fluid text-center bg-primary mb-3"> 
     <img id="logo" class="pb-5 pt-5  mx d block" src="./img/undraw_profile_pic_ic5t.svg" alt="profilo"> 
     <h3 class="mb-5">Pinco Pallo</h3>
-    <span class="mb-3 "> Web Designer <span>
+    <span class="mb-3 "> Web Designer </span>
 </div>
  <!-- FOTOPROFILO-->
 
@@ -50,11 +50,11 @@
  <!-- img-->
 
   
-    <div  class="  row mx-2 mt-3   ">
+    <div  class="  row  mt-3   ">
 
         <!-- 1img-->
         <div id="cardsize" class="col">
-          <div class="card h-0">
+          <div class="card h-100">
             <img src="img/portfolio/cabin.png" class="card-img-top" alt="Cabine website">
             <div class="card-body text-center">
               <h5 class="card-title ">Cabin Website</h5>
@@ -71,7 +71,7 @@
 
         <!-- 2 img-->
         <div id="cardsize" class="col">
-            <div class="card h-0">
+            <div class="card h-100">
               <img src="img/portfolio/cake.png" class="card-img-top" alt="Cabine website">
               <div class="card-body text-center">
                 <h5 class="card-title ">Cabin Website</h5>
@@ -86,7 +86,7 @@
           </div>
 
         <div id="cardsize" class="col">
-            <div class="card h-0">
+            <div class="card h-100">
               <img src="img/portfolio/circus.png" class="card-img-top" alt="Cabine website">
               <div class="card-body text-center">
                 <h5 class="card-title ">Cabin Website</h5>
@@ -112,7 +112,7 @@
     
             <!-- 1img-->
             <div id="cartesotto " class="col-4">
-              <div class="card h-0">
+              <div class="card h-100">
                 <img src="img/portfolio/game.png" class="card-img-top" alt="Cabine website">
                 <div class="card-body text-center">
                   <h5 class="card-title ">Cabin Website</h5>
@@ -129,7 +129,7 @@
     
             <!-- 2 img-->
             <div id="cartesotto" class="col-4">
-                <div class="card h-0">
+                <div class="card h-100">
                   <img src="img/portfolio/safe.png" class="card-img-top" alt="Cabine website">
                   <div class="card-body text-center">
                     <h5 class="card-title ">Cabin Website</h5>
@@ -144,7 +144,7 @@
               </div>
     
               <div id="cartesotto" class="col-4">
-                <div class="card h-0">
+                <div class="card h-100">
                   <img src="img/portfolio/submarine.png" class="card-img-top" alt="Cabine website">
                   <div class="card-body text-center">
                     <h5 class="card-title ">Cabin Website</h5>
@@ -165,40 +165,41 @@
 
 
     <!--FORM-->
-<div class="container bg-primary mx-5">
+<div class="container-fluid bg-primary mt-5">
 
     <div class="row g-3">
         <div class="col">
-        <label for="nome" class="form-label">Nome:</label>
-          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+        <label  class="form-label">Nome:</label>
+          <input type="text"id="nome" class="form-control" placeholder="First name" aria-label="First name">
         </div>
         <div class="col">
-            <label for="cognome" class="form-label">cognome:</label>
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-        </div>
-      </div>
-
-
-      <div class="row g-3">
-        <div class="col">
-        <label for="email" class="form-label">email:</label>
-          <input type="text" class="form-control" placeholder="pinco@gmail.com" aria-label="First name ">
-        </div>
-        <div class="col">
-            <label for="ore" class="form-label">ammontare di ore:</label>
-          <input id="ore" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            <label  class="form-label">cognome:</label>
+          <input type="text"id="cognome" class="form-control" placeholder="Last name" aria-label="Last name">
         </div>
       </div>
 
 
       <div class="row g-3">
         <div class="col">
-        <label for="lavoro" class="form-label">tipo di lavoro:</label>
-        <select class="form-select" aria-label="Disabled select example" disabled>
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+        <label  class="form-label">email:</label>
+          <input type="text" id="email" class="form-control" placeholder="pinco@gmail.com" aria-label="First name ">
+        </div>
+        <div class="col">
+            <label  class="form-label">ammontare di ore:</label>
+          <input id="ore" type="text" class="form-control" placeholder="ore" aria-label="Last name">
+        </div>
+      </div>
+
+
+      <div class="row g-3">
+        <div class="col">
+        <label  class="form-label">tipo di lavoro:</label>
+        
+        <select id="lavoro"class="form-select" >
+            <option selected>Scegli il progetto</option>
+            <option value="lavoro">backend</option>
+            <option value="lavoro">frontend</option>
+            <option value="lavoro">analisi progettuale</option>
           </select>
         </div>
         <div class="col">
@@ -209,15 +210,20 @@
 
 
       <!--descrizione-->
-      <div class="container mt-4 bg-dark">
+      <div  align="center"class="container mt-4 bg-primary">
 
-        <label for="comment">Comments:</label>
+        <label >Comments:</label>
         <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+
+
+
+        <button  type="button" class="btn btn-warning mt-2 align " onclick=" ValidateSubmit()">send</button>
+
 
     </div>
 
 
-      
+    <span  id="prezzo" class="text-white">  </span>
 
 </div>
 
@@ -227,10 +233,17 @@
 
 
 
+<footer>
+  <div  class="container-fluid bg-dark text-white">
+    <section align="center">
+      <h3 >LOCATION</h3>
+      <span>2255 john daniel drive</span>
+    </section>
+
+  </div>
 
 
-
-
+</footer>
 
 
 
@@ -246,13 +259,4 @@
     -->
   </body>
 
-  <footer>
-      <div align="center" class="container bg-dark">
-          <h3 class="mb-5">LOCATION</h3>
-          <span>2255 john daniel drive</span>
-
-      </div>
-
-
-  </footer>
 </html>
